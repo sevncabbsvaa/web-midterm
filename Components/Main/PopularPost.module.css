@@ -1,0 +1,81 @@
+.popularSection {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #06b6d4;
+}
+
+.popularGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .popularGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .popularGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.popularCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: float 5s ease-in-out infinite;
+}
+
+.popularCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.popularCardImage {
+  height: 16rem;
+  overflow: hidden;
+}
+
+.popularCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.popularCard:hover .popularCardImage img {
+  transform: scale(1.1);
+}
+
+.popularCardContent {
+  padding: 1rem;
+}
+
+.popularCardContent h3 {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.float1 { animation-delay: 0s; }
+.float2 { animation-delay: 1.5s; }
+.float3 { animation-delay: 3s; }
